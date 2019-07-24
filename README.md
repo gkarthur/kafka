@@ -1,2 +1,2 @@
-# kafka
-Solution Kafka
+# Kafka
+Répository dédié au gestionnaire Kafka.
