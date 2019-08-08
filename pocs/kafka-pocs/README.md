@@ -77,6 +77,8 @@ java -jar kafka-pocs-traces\target\kafka-pocs-traces-0.0.1-SNAPSHOT.jar
 
 Se connecter à l'application de Gestion des demandes : http://localhost:8080/app-demandes/demandes.
 
+<img src="/pocs/screenshots/Demandes.PNG" width="600" align="center">
+
 Rafraichir la page toute les 5 secondes pour voir les demandes changer de statut.
 
 ### Visualiser les traces
