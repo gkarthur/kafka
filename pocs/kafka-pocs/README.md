@@ -6,7 +6,7 @@
 
 <ol>
   <li>Création de demande via IHM, ou bien via application batch. Les demandes sont enregistrées dans la file de message (Topic Kafka) <b>demandes-in</b></li>
-  <li>Le service de gestion des demandes recupère les demandes depuis la file puis enregistre les demandes en bases</li>
+  <li>Le service de gestion des demandes recupère les demandes au fil de l'eau depuis la file puis enregistre les demandes en base de données</li>
   <li>Le service de gestion des demandes transmet la nouvelle demande, via la file de message <b>demandes-out</b>, aux services Logistique et facturation</li>
   <li>Le service Logistique recupère les demandes, puis lance les opérations de préparation et d'expédition de la commande. Le service Facturation recupère les demandes, puis lance les opérations de facturation</li>
   <li>Le service Logistique transmet les modifications effectuées sur la demande au service de gestion des demandes. Le service de gestion des demandes met à jour la demande en base</li>
@@ -75,6 +75,12 @@ java -jar kafka-pocs-traces\target\kafka-pocs-traces-0.0.1-SNAPSHOT.jar
 
 ### Visualiser les demandes
 
-Se connecter à l'application de Gestion des demandes : http://localhost:8080/app-demandes/demandes
+Se connecter à l'application de Gestion des demandes : http://localhost:8080/app-demandes/demandes.
+
+Rafraichir la page toute les 5 secondes pour voir les demandes changer de statut.
+
+### Visualiser les demandes
+
+Afficher les documents traces indexés dans Elasticsearch : http://localhost:9200/_search
 
 
