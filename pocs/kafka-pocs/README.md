@@ -31,6 +31,9 @@ Télécharger et installer les composants Kafka 2.11-2.2.0 et Elasticsearch 6.6.
 ```
 cd C:\tools\kafka_2.11-2.2.0
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+cd C:\tools\kafka_2.11-2.2.0
+.\bin\windows\kafka-server-start.bat .\config\server.properties
 ```
 
 ### Création des topics
