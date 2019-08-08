@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.capgemini.per</groupId>
+	<artifactId>kafka-pocs</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Application POC Kafka</name>
+	<description>Application POC Kafka</description>
+
+	<modules>
+	    <module>kafka-pocs-commons</module>
+		<module>kafka-pocs-demandes</module>
+		<module>kafka-pocs-evenements</module>
+		<module>kafka-pocs-logistique</module>
+		<module>kafka-pocs-facturation</module>
+		<module>kafka-pocs-traces</module>
+		<module>kafka-pocs-batch</module>		
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>		
+		<maven.compiler.plugin>3.1</maven.compiler.plugin>
+		<maven.processor.plugin>2.2.4</maven.processor.plugin>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<build.helper.maven.plugin>1.12</build.helper.maven.plugin>
+		<maven.enforcer.plugin>1.4.1</maven.enforcer.plugin>
+		<maven.jar.plugin>2.6</maven.jar.plugin>
+		<springBoot.version>2.1.5.RELEASE</springBoot.version>		
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springBoot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven.jar.plugin}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	<dependencies>
+		<dependency>
+		    <groupId>org.springframework.kafka</groupId>
+		    <artifactId>spring-kafka</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
