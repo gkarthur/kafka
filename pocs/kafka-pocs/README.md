@@ -79,7 +79,7 @@ Se connecter à l'application de Gestion des demandes : http://localhost:8080/ap
 
 Rafraichir la page toute les 5 secondes pour voir les demandes changer de statut.
 
-### Visualiser les demandes
+### Visualiser les traces
 
 Afficher les documents traces indexés dans Elasticsearch : http://localhost:9200/_search
 
