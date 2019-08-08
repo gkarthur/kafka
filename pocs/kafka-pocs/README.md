@@ -15,8 +15,10 @@
 
 ## Build
 
+```
 cd kafka-pocs
 mvn clean install
+```
 
 ## Demo
 
@@ -26,9 +28,26 @@ Télécharger et installer les composants Kafka 2.11-2.2.0 et Elasticsearch 6.6.
 
 ### Démarrage du serveur Kafka
 
+```
+cd C:\tools\kafka_2.11-2.2.0
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+```
+
 ### Création des topics
 
+```
+cd C:\tools\kafka_2.11-2.2.0
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic traces
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic demandes-in
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 3 --topic demandes-out
+```
+
 ### Démarrage du serveur ElasticSearch
+
+```
+cd C:\tools\elasticsearch-6.6.0
+.\bin\elasticsearch.bat
+```
 
 ### Démarrage du service Gestion des demandes
 
