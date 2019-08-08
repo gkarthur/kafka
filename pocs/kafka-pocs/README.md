@@ -2,7 +2,7 @@
 
 ## Uses Case
 
-<img src="/pocs/screenshots/archi.PNG" width="800">
+<img src="/pocs/screenshots/archi.PNG" width="600">
 
 Another
 
