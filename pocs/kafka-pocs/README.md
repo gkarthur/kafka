@@ -2,6 +2,14 @@
 
 ## Uses Case
 
+Ce poc a pour objectif de démontrer, en se basant sur la technologie Kafka, la faisabilité des uses cases suivants:
+<ol>
+  <li>mise en place d'un broker de message auquel s'abonnent les applications, l'échange de message de fait de façon asynchrone permettant ainsi de découpler les opérations entre l'application qui produit une donnée et cette qui la consomme. Avantage, on évite l'effet Domino sur le système. Dans le poc, chaque micro service produit ou consomme les objets metiers via une file de message</li>
+  <li>mise en place d'un système de log centralisé. Chaque micro service écrit ses logs dans une file de message dedié, ainsi il est possible de suivre et monitorer toutes les activités du système. Plus necessaire de gérer le stockage par application, ni de gérer les entrées/sorties de fichiers, ni de gérer les rotations de fichiers de logs. Tout est centralisé et géré une fois pour toute les applications. Dans le poc, il est question de récupérer les logs puis de les indexés dans une base Elasticsearch. Pour traiter ces données il suffira de brancher Kibana.</li>
+</ol>  
+
+## Archi
+
 <img src="/pocs/screenshots/archi.PNG" width="600" align="center">
 
 <ol>
